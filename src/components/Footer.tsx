@@ -1,13 +1,16 @@
 import { Linkedin, Instagram, Youtube, Twitter } from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Team", href: "/team" },
+    { name: "Testimonials", href: "/testimonials" },
+    { name: "Contact", href: "/contact" }
   ];
 
   const socialLinks = [
@@ -23,9 +26,9 @@ const Footer = () => {
         <div className="text-center">
           {/* Logo */}
           <div className="mb-8">
-            <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <Link to="/" className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300">
               Mindexa
-            </span>
+            </Link>
           </div>
 
           {/* Quick Links */}
@@ -33,12 +36,12 @@ const Footer = () => {
             <ul className="flex flex-wrap justify-center gap-6 md:gap-8">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-background/80 hover:text-background transition-colors duration-300 font-medium"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

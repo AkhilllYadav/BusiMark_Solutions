@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -32,9 +33,11 @@ const Hero = () => {
 
           {/* CTA Button */}
           <div className="animate-scale-in">
-            <Button variant="hero" size="xl" className="shadow-hero">
-              Start Your Project
-            </Button>
+            <Link to="/contact">
+              <Button variant="hero" size="xl" className="shadow-hero">
+                Start Your Project
+              </Button>
+            </Link>
           </div>
         </div>
 
