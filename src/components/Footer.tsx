@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="mb-8">
             <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Mindexa
+              TheTrioX
             </span>
           </div>
 
@@ -63,7 +63,7 @@ const Footer = () => {
           {/* Divider */}
           <div className="border-t border-background/20 pt-8">
             <p className="text-background/60 text-sm">
-              Copyright © 2025 Mindexa | All Rights Reserved
+              Copyright © 2025 TheTrioX | All Rights Reserved
             </p>
           </div>
         </div>

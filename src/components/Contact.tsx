@@ -38,7 +38,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: "hello@mindexa.com"
+      details: "hello@thetrioX.com"
     }
   ];
 
@@ -57,62 +57,22 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+          {/* Tally Form Embed */}
           <div className="bg-gradient-card rounded-3xl p-8 shadow-card hover:shadow-hover transition-all duration-500">
             <h3 className="text-2xl font-semibold text-foreground mb-6">Send us a message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Your Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Enter your full name"
-                  className="w-full"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email Address
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter your email address"
-                  className="w-full"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your project..."
-                  rows={6}
-                  className="w-full resize-none"
-                  required
-                />
-              </div>
-
-              <Button type="submit" variant="hero" size="lg" className="w-full">
-                Send Message
-              </Button>
-            </form>
+            <div className="w-full">
+              <iframe 
+                data-tally-src="https://tally.so/embed/3jqWqY?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                loading="lazy" 
+                width="100%" 
+                height={476} 
+                frameBorder={0} 
+                marginHeight={0} 
+                marginWidth={0} 
+                title="Send a Message"
+                className="rounded-lg"
+              ></iframe>
+            </div>
           </div>
 
           {/* Contact Information */}

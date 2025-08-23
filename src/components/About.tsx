@@ -1,4 +1,5 @@
 import aboutTeamImage from "@/assets/about-team.jpg";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const values = [
@@ -21,9 +22,9 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Who We Are
-          </h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          Who We Are
+        </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
         </div>
 
@@ -32,7 +33,7 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Mindexa is a creative marketing agency helping brands connect with their audience through innovation, design, and strategy. We transform your digital presence into a powerful tool for growth and success.
+                TheTrioX is a creative marketing agency helping brands connect with their audience through innovation, design, and strategy. We transform your digital presence into a powerful tool for growth and success.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 With years of experience and a passion for excellence, we've helped hundreds of businesses achieve their digital marketing goals through tailored solutions and creative approaches.
@@ -51,6 +52,29 @@ const About = () => {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* Call to Action with PDF Download */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button variant="cta" size="lg" className="shadow-card">
+                Learn More About Us
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="shadow-card"
+                onClick={() => {
+                  // Create and download PDF
+                  const link = document.createElement('a');
+                  link.href = '/company-profile.pdf';
+                  link.download = 'TheTrioX-Company-Profile.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                Download Company Profile PDF
+              </Button>
             </div>
           </div>
 
