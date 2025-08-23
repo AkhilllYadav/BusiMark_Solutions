@@ -1,10 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Calendar } from "lucide-react";
 
 const Contact = () => {
+  // Load Tally script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      // Check if Tally is available and call loadEmbeds
+      if ((window as any).Tally) {
+        (window as any).Tally.loadEmbeds();
+      } else {
+        // Fallback: manually load iframes with data-tally-src
+        document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe: any) => {
+          iframe.src = iframe.dataset.tallySrc;
+        });
+      }
+    };
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -65,10 +90,8 @@ const Contact = () => {
                 data-tally-src="https://tally.so/embed/3jqWqY?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
                 loading="lazy" 
                 width="100%" 
-                height={476} 
-                frameBorder={0} 
-                marginHeight={0} 
-                marginWidth={0} 
+                height="476" 
+                style={{ border: 'none' }}
                 title="Send a Message"
                 className="rounded-lg"
               ></iframe>
