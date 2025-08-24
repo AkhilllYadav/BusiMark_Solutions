@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const companyItems = [
+    { name: "About", href: "#about" },
+    { name: "Team", href: "#team" },
+    { name: "Be Partner", href: "#partner" },
   ];
 
   return (
@@ -27,6 +32,28 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={() => setIsCompanyOpen(!isCompanyOpen)}
+                className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              >
+                Company <ChevronDown size={16} className="ml-1" />
+              </button>
+              <div className="absolute left-0 mt-2 w-40 bg-background border border-border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+                {companyItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-primary"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Other Nav Items */}
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -41,7 +68,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <Button variant="cta" size="lg">
-              Get in Touch
+              <a href="#contact">Get in Touch</a>
             </Button>
           </div>
 
@@ -60,6 +87,26 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border animate-fade-in">
+              {/* Company Dropdown (Mobile) */}
+              <div>
+                <span className="block px-3 py-2 font-medium text-foreground">
+                  Company
+                </span>
+                <div className="ml-4 space-y-1">
+                  {companyItems.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block px-3 py-2 text-sm text-foreground hover:text-primary"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Other Nav Items */}
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -70,9 +117,10 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
+
               <div className="px-3 py-2">
                 <Button variant="cta" size="lg" className="w-full">
-                  Get in Touch
+                  <a href="#contact">Get in Touch</a>
                 </Button>
               </div>
             </div>

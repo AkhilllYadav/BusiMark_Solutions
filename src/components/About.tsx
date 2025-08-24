@@ -57,7 +57,7 @@ const About = () => {
             {/* Call to Action with PDF Download */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button variant="cta" size="lg" className="shadow-card">
-                Learn More About Us
+                <a href="#contact">Learn More About Us</a>
               </Button>
               <Button 
                 variant="outline" 

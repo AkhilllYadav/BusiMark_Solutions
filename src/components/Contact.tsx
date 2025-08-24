@@ -58,12 +58,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Number",
-      details: "+91 98765 43210"
+      details: "+91 89488 90610, +91 92114 79010"
     },
     {
       icon: Mail,
       title: "Email Address",
-      details: "hello@thetrioX.com"
+      details: "services@thetrioX.com"
     }
   ];
 
@@ -127,8 +127,8 @@ const Contact = () => {
             {/* Schedule Call Button */}
             <div className="pt-6">
               <Button variant="cta" size="lg" className="w-full">
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule a Call
+                <Phone className="w-5 h-5 mr-2" />
+                <a href="tel:+918948890610">Discuss Your Project</a>
               </Button>
             </div>
           </div>

@@ -83,9 +83,9 @@ const Services = () => {
               </ul>
 
               {/* Learn More Button */}
-              <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
+              {/* <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
                 Learn More
-              </Button>
+              </Button> */}
             </div>
           ))}
         </div>
@@ -93,7 +93,7 @@ const Services = () => {
         {/* Call to Action */}
         <div className="text-center">
           <Button variant="hero" size="xl">
-            Get Started Today
+            <a href="#contact">Get started Today</a>
           </Button>
         </div>
       </div>

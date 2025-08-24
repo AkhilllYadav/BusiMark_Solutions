@@ -33,7 +33,7 @@ const Hero = () => {
           {/* CTA Button */}
           <div className="animate-scale-in">
             <Button variant="hero" size="xl" className="shadow-hero">
-              Start Your Project
+              <a href="#contact">Start Your Project</a>
             </Button>
           </div>
         </div>
