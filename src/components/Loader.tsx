@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import loaderLogo from "@/assets/Loader-triox.gif" // ✅ import your gif
+import loaderLogo from "@/assets/Loader_busimark.gif" // ✅ import your gif
 
 export default function Loader() {
   const [progress, setProgress] = useState(0)
