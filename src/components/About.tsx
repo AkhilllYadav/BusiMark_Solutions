@@ -33,7 +33,7 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                TheTrioX is a creative marketing agency helping brands connect with their audience through innovation, design, and strategy. We transform your digital presence into a powerful tool for growth and success.
+                BusiMark Solutions is a creative marketing agency helping brands connect with their audience through innovation, design, and strategy. We transform your digital presence into a powerful tool for growth and success.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 With years of experience and a passion for excellence, we've helped hundreds of businesses achieve their digital marketing goals through tailored solutions and creative approaches.
