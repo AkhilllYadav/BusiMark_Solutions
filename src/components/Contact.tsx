@@ -53,7 +53,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office Address",
-      details: "123 Business Avenue, Tech District, Mumbai 400001, India"
+      details: "Noida Sec 66, Mamura, Noida 201306, India"
     },
     {
       icon: Phone,
