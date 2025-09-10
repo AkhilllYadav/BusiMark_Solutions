@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="mb-8">
             <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              TheTrioX
+              BusiMark Solutions
             </span>
           </div>
 
