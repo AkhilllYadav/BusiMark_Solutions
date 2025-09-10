@@ -63,7 +63,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: "services@thetrioX.com"
+      details: "services@BusiMarkSolutions.com"
     }
   ];
 
