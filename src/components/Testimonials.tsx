@@ -12,7 +12,7 @@ const Testimonials = () => {
       company: "StyleHub",
       image: "https://images.unsplash.com/photo-1494790108755-2616c19a70fe?w=100&h=100&fit=crop&crop=face",
       rating: 5,
-      text: "TheTrioX transformed our online presence completely! Our engagement doubled and sales increased by 300%. Their creative approach and strategic thinking made all the difference.",
+      text: "BusiMark Solutions transformed our online presence completely! Our engagement doubled and sales increased by 300%. Their creative approach and strategic thinking made all the difference.",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
@@ -21,7 +21,7 @@ const Testimonials = () => {
       company: "TechFlow Solutions",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
       rating: 5,
-      text: "Working with TheTrioX was a game-changer for our startup. They created an amazing brand identity and website that helped us secure our Series A funding. Highly recommended!",
+      text: "Working with BusiMark Solutions was a game-changer for our startup. They created an amazing brand identity and website that helped us secure our Series A funding. Highly recommended!",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
